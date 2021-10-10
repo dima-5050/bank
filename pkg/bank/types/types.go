@@ -29,8 +29,4 @@ type Payment struct {
 	Category Category
 }
 
-type PaymentSource struct {
-	Type    string
-	Number  string
-	Balance Money
-}
+
