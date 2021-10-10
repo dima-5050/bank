@@ -1,6 +1,6 @@
 package types
 
-type Money string
+type Money int64
 
 type Currency string
 
@@ -12,12 +12,26 @@ const (
 
 type PAN string
 
-type Card struct{
-	ID int
-	PAN PAN
+type Card struct {
+	ID         int
+	PAN        PAN
+	Balance    Money
+	MinBalance Money
+	Currency   Currency
+	Color      string
+	Name       string
+	Active     bool
+}
+type Category string
+
+type Payment struct {
+	ID     int
+	Amount Money
+	Category Category
+}
+
+type PaymentSource struct {
+	Type    string
+	Number  string
 	Balance Money
-	Currency Currency
-	Color string
-	Name string
-	Active bool
 }
