@@ -13,21 +13,27 @@ const (
 type PAN string
 
 type Card struct {
-	ID         int
-	PAN        PAN
-	Balance    Money
-	Currency   Currency
-	Color      string
-	Name       string
-	Active     bool
+	ID       int
+	PAN      PAN
+	Balance  Money
+	Currency Currency
+	Color    string
+	Name     string
+	Active   bool
 }
 type Category string
 
+type Status string
+
+const (
+	StatusOk   Status = "OK"
+	StatusFail Status = "FAIL"
+	StatusProgrss Status="INPROGRESS"
+)
+
 type Payment struct {
-	ID     int
-	Amount Money
+	ID       int
+	Amount   Money
 	Category Category
+	Status   Status
 }
-
-type Deposit string
-
