@@ -29,4 +29,5 @@ type Payment struct {
 	Category Category
 }
 
+type Deposit string
 
